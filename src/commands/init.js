@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const ora = require('ora');
 
-const { getSyncyPath, printError, urlRegex } = require('../util');
+const { getGbckPath, printError, urlRegex } = require('../util');
 const { gitCloneProject } = require('../git');
 
 const questions = [
@@ -27,8 +27,8 @@ const questions = [
 async function init(force) {
   const { name, url } = await inquirer.prompt(questions);
 
-  const syncyPath = await getSyncyPath();
-  const projectPath = `${syncyPath}/${name}`;
+  const gbckPath = await getGbckPath();
+  const projectPath = `${gbckPath}/${name}`;
 
   if (!force && (await fs.pathExists(projectPath))) {
     printError(
@@ -53,7 +53,7 @@ async function init(force) {
   await fs.writeFile(
     readmeFile,
     `# ${name}
-  Synced with Syncy.
+  Synced with [gbck](https://github.com/jukben/gbck)
   `
   );
 

@@ -52,8 +52,8 @@ function printError(e) {
 }
 
 async function log(message, level = 'error') {
-  const syncyPath = await getSyncyPath();
-  const file = `${syncyPath}/${level}.log`;
+  const gbckPath = await getGbckPath();
+  const file = `${gbckPath}/${level}.log`;
 
   await fs.ensureFile(file);
   await fs.appendFile(file, `> ${new Date().toUTCString()}\n${message}\n\n`);
@@ -69,15 +69,15 @@ function printSuccess(message) {
   );
 }
 
-async function getSyncyPath() {
-  const syncPath = `${os.homedir()}/.syncy`;
+async function getGbckPath() {
+  const syncPath = `${os.homedir()}/.gbck`;
   await fs.ensureDir(syncPath);
   return syncPath;
 }
 
 const getProjectPath = async projectName => {
-  const syncyPath = await getSyncyPath();
-  const projectPath = `${syncyPath}/${projectName}`;
+  const gbckPath = await getGbckPath();
+  const projectPath = `${gbckPath}/${projectName}`;
   if (!await fs.pathExists(projectPath)) {
     throw new Error('Project path is invalid!');
   }
@@ -113,10 +113,10 @@ const getProjectConfig = async projectName => {
 };
 
 async function getAvailableProjects() {
-  const syncyPath = await getSyncyPath();
-  const files = await fs.readdir(syncyPath);
+  const gbckPath = await getGbckPath();
+  const files = await fs.readdir(gbckPath);
   return files.filter(a =>
-    fs.lstatSync(path.resolve(syncyPath, a)).isDirectory()
+    fs.lstatSync(path.resolve(gbckPath, a)).isDirectory()
   );
 }
 
@@ -126,7 +126,7 @@ module.exports = {
   printError,
   log,
   printSuccess,
-  getSyncyPath,
+  getGbckPath,
   getProjectPath,
   getProjectConfig,
   urlRegex,

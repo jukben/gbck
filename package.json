@@ -1,7 +1,7 @@
 {
-  "name": "syncy-cli",
+  "name": "gbck",
   "version": "0.0.1",
-  "description": "",
+  "description": "Intuitive and lightweight utility to easily backup files into Git repository",
   "scripts": {
     "test": "jest",
     "lint": "eslint src"
@@ -10,7 +10,7 @@
     "node": ">=7.5.0"
   },
   "bin": {
-    "syncy": "cli.js"
+    "gbck": "cli.js"
   },
   "author": "",
   "license": "MIT",

@@ -79,7 +79,7 @@ class ProjectFactory {
   }
 
   async update(autoCommit = false) {
-    let message = 'Updated by Syncy';
+    let message = 'Updated by Gbck';
 
     if (!autoCommit) {
       const answer = await inquirer.prompt([
@@ -87,7 +87,7 @@ class ProjectFactory {
           type: 'input',
           name: 'message',
           message: `Commit message for project "${this.projectName}"?`,
-          default: 'Updated by Syncy',
+          default: 'Updated by Gbck',
         },
       ]);
       message = answer.message;

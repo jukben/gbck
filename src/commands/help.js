@@ -1,5 +1,5 @@
 module.exports = () =>
-  console.log(`Usage: syncy [projects]
+  console.log(`Usage: gbck [projects]
 
 Options:
 -i, --init                Create new project  
