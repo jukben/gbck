@@ -1,6 +1,6 @@
 {
   "name": "gbck",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Intuitive lightweight tool for easy and seamless backup of your files into Git repository",
   "scripts": {
     "test": "exit 0",
@@ -38,8 +38,13 @@
     "extends": "callstack-io",
     "rules": {
       "no-console": 0,
-      "no-cond-assign": [0, "except-parens"],
-      "no-await-in-loop": [0]
+      "no-cond-assign": [
+        0,
+        "except-parens"
+      ],
+      "no-await-in-loop": [
+        0
+      ]
     },
     "globals": {
       "jest": true
