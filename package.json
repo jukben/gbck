@@ -1,6 +1,6 @@
 {
   "name": "gbck",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Intuitive and lightweight utility to easily backup files into Git repository",
   "scripts": {
     "test": "jest",
