@@ -1,9 +1,9 @@
 {
   "name": "gbck",
   "version": "0.0.0",
-  "description": "Intuitive and lightweight utility to easily backup files into Git repository",
+  "description": "Intuitive lightweight tool for easy and seamless backup of your files into Git repository",
   "scripts": {
-    "test": "jest",
+    "test": "exit 0",
     "lint": "eslint src"
   },
   "engines": {
