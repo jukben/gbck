@@ -9,9 +9,9 @@
 * [Introduction](#introduction)
 * [Install](#install)
 * [Usage](#usage)
-  * [Create new project](#create-new-project)
+  * [Create a new project](#create-a-new-project)
   * [List available projects](#list-available-projects)
-  * [Backup a project](#backup-a-project)
+  * [Back up a project](#back-up-a-project)
 * [Contributing](#contributing)
 * [License](#license)
 
@@ -44,7 +44,7 @@ Options:
 
 Note: gbck stores every information under `~/.gbck`
 
-### Create new project
+### Create a new project
 
 For a creation of a new project just run `gbck --init`.
 
@@ -54,9 +54,9 @@ You project will be saved inside `~/.gbck/<project-name>/`
 * `README.md`
 * `.vsc` - the actual Git repository folder
 
-If you use `--force` or `-f` option you will be able rewrite already existing project.
+If you use `--force` or `-f` option you will be able to rewrite already existing project.
 
-Now it's time to configure it!
+Now it's time to configure it, so open a `~/.gbck/<project-name>/config` and go on.
 
 > Check out this example [configuration](https://github.com/jukben/dotfiles/blob/master/.gbck/config) 💪
 
@@ -106,15 +106,17 @@ next, `entities` has to be an array:
 
 Run `gbck --list` to see a list of available projects even with information when where lastly updated.
 
-### Backup a project
+### Back up a project
 
 For back up all project just simply run `gbck`. If you want to back up particular project run e.g. `gbck dotfiles private-dotfiles`
+
+If you run this command along with `--auto-commit` you won't be asked for a commit message. This could be good for some types of automatization.
 
 ## Contributing
 
 Do you miss something? Open an issue, I'd like to hear more about your use case. You can also fork this repository run `yarn` and send a PR! ❤️
 
-Currently test are missing. 😥 But you can help me to fix this!
+Currently, tests are missing. 😥 But you can help me to fix this!
 
 ## License
 
