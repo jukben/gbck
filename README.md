@@ -24,7 +24,7 @@ All you have to do is just to create the config file containing all files (and/o
 
 `npm i -g gbck`
 
-_Requirement: You need to have Node 7.5+ installed on your machine_
+_Requirement: You need to have [Node 7.5+](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your machine_
 
 ## Usage
 
