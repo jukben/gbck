@@ -62,7 +62,7 @@ Now it's time to configure it, so open a `~/.gbck/<project-name>/config` and go 
 
 `config` has to be valid JSON:
 
-* Fields `url: string`, `readme: string`, `entities: string` are mandatory.
+* Fields `url: string`, `readme: string`, `entities: Array` are mandatory.
 * Field `syncConfig: boolean` is optional and defaults to true.
 
 next, `entities` has to be an array:
