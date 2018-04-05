@@ -20,6 +20,9 @@
 Gbck is an intuitive lightweight tool for an easy and seamless backup of your files e.g. various [config files](https://github.com/jukben/dotfiles). It's built to be an easy and flexible as possible.
 All you have to do is just to create the config file containing all files (and/or commands' stdouts) you desire to back up.
 
+👉 Read [gbck— an easy way how to back up your dotfiles](https://medium.com/@jukben/gbck-an-easy-way-how-to-back-up-your-dotfiles-2a9bf44ab622)
+on Medium.com
+
 ## Install
 
 `npm i -g gbck`
