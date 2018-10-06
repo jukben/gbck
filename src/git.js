@@ -111,12 +111,20 @@ class ProjectFactory {
   }
 
   async isUpToDate() {
-    let currentFiles = await this.repo.raw([
-      'ls-tree',
-      '--name-only',
-      '-r',
-      'HEAD',
-    ]);
+    let currentFiles;
+
+    try {
+      currentFiles = await this.repo.raw([
+        'ls-tree',
+        '--name-only',
+        '-r',
+        'HEAD',
+      ]);
+    } catch (e) {
+      // if there is error in processing the last command, most likely it's a fresh repo, so we don't have any file yet
+      currentFiles = '';
+    }
+
     currentFiles = currentFiles.split('\n').filter(ab => ab);
 
     const removedFiles = currentFiles
