@@ -79,7 +79,7 @@ async function copyFiles(project) {
       options: {
         include: null,
         exclude: null,
-        noSymlinks: false,
+        symlinks: true,
       },
     };
 
@@ -107,7 +107,7 @@ async function copyFiles(project) {
               files.forEach(f => {
                 if (
                   fs.lstatSync(f).isSymbolicLink() &&
-                  entityObject.options.noSymlinks
+                  !entityObject.options.symlinks
                 ) {
                   return;
                 }
