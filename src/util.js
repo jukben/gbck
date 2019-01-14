@@ -20,7 +20,7 @@ const configSchema = joi.object().keys({
         i: joi.string().required(),
         o: joi.string().required(),
         options: joi.object().keys({
-          noSymlinks: joi.boolean(),
+          symlinks: joi.boolean(),
           include: joi.array().items(joi.string()),
           exclude: joi.array().items(joi.string()),
         }),

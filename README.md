@@ -37,7 +37,7 @@ _Requirement: You need to have [Node 7.5+](https://nodejs.org/en/) and [Git](htt
 Usage: gbck [projects]
 
 Options:
--i, --init                Create new project  
+-i, --init                Create new project
 -f, --force               Along with -i create new project even if already exists
 -l, --list                List all project sorted by its latest updates
 -v, --version             Print version
@@ -75,7 +75,7 @@ next, `entities` has to be an array:
 * If the item is a type of array, the first item of that array is the final file name and the second item is the command which will be run and its stdout will be backed up into this file.
 
 * If the item is a type of object. The `i:string` and `o:string` property are mandatory, `i` is input file / folder, `o` is output name. There could be also `options: object` property defined. Possible options are:
-  * `noSymlinks: boolean`, defaults to false
+  * `symlinks: boolean`, defaults to true
   * `exclude: Array<glob>` defaults to []
   * `include: Array<glob>` defaults to []
 
@@ -89,7 +89,7 @@ next, `entities` has to be an array:
       "i": "~/.config/fish",
       "o": ".config/fish",
       "options": {
-        "noSymlinks": true,
+        "symlinks": false,
         "exclude": ["fishd.dca90476d2cf"]
       }
     },
