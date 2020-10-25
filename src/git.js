@@ -57,6 +57,7 @@ class ProjectFactory {
 
     this.config = await getProjectConfig(this.projectName);
     this.repo = git(this.vsc).silent(true);
+    await this.repo.checkout(this.config.branch);
   }
 
   async reset() {
@@ -97,7 +98,7 @@ class ProjectFactory {
 
     try {
       await this.repo.commit(message);
-      await this.repo.push('origin', 'master', ['-f']);
+      await this.repo.push('origin', this.config.branch, ['-f']);
       spinner.succeed(
         `Project "${this.projectName}" has been successfully updated.`
       );

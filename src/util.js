@@ -11,6 +11,7 @@ const configSchema = joi.object().keys({
   url: joi.string().regex(urlRegex),
   readme: joi.string(),
   syncConfig: joi.boolean().default(true),
+  branch: joi.string().default('master'),
   entities: joi
     .array()
     .items(

@@ -67,6 +67,7 @@ Now it's time to configure it, so open a `~/.gbck/<project-name>/config` and go 
 
 * Fields `url: string`, `readme: string`, `entities: Array` are mandatory.
 * Field `syncConfig: boolean` is optional and defaults to true.
+* Field `branch: string` is optional and defaults to "master".
 
 next, `entities` has to be an array:
 
