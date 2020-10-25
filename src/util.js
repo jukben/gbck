@@ -103,7 +103,7 @@ const getProjectConfig = async projectName => {
     );
   }
 
-  const result = joi.validate(config, configSchema);
+  const result = configSchema.validate(config);
 
   if (result.error) {
     await log(result.error);
