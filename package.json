@@ -25,7 +25,7 @@
     "minimist": "^1.2.0",
     "ora": "^5.1.0",
     "recursive-readdir": "^2.2.1",
-    "simple-git": "^2.21.0",
+    "simple-git": "^3.3.0",
     "untildify": "^4.0.0",
     "update-notifier": "^5.0.0"
   },
